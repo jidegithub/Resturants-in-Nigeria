@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <h1>Cloud Cafe</h1>
+  <main>
+    <div class="content">
+      <form id='add-cafe-form'>
+        <input type="text" name="name" placeholder="cafe name">
+        <input type="text" name="city" placeholder="cafe city">
+        <input type="submit">
+      </form>
+    </div>
+    <div>
+      <ul id="cafe-list"></ul>
+    </div>
+  </main>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBTiTDb5EZFMt_QeMZ0VS5ulJqPYlds9eA",
+        authDomain: "resturants-list.firebaseapp.com",
+        databaseURL: "https://resturants-list.firebaseio.com",
+        projectId: "resturants-list",
+        storageBucket: "resturants-list.appspot.com",
+        messagingSenderId: "54317959386"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      // db.settings({timestampsInSnapshots: true});
+    </script>
+
+    <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
